@@ -28,6 +28,14 @@
         <li class="menu-header small">
             <span class="menu-header-text">{{__('Apps & Pages')}}</span>
         </li>
+        @can(['view invoice'])
+            <li class="menu-item {{ request()->routeIs('dashboard.invoices.*') ? 'active' : '' }}">
+                <a href="{{ route('dashboard.invoices.index') }}" class="menu-link">
+                    <i class="menu-icon tf-icons ti ti-file-invoice"></i>
+                    <div>{{__('Invoices')}}</div>
+                </a>
+            </li>
+        @endcan
         @canany(['view user', 'view archived user'])
             <li class="menu-item {{ request()->routeIs('dashboard.user.*') || request()->routeIs('dashboard.archived-user.*') ? 'open' : '' }}">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">

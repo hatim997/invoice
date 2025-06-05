@@ -307,5 +307,8 @@
     "System Settings Updated Successfully" : "System Settings Updated Successfully",
     "Email Settings Updated Successfully" : "Email Settings Updated Successfully",
     "Test Email Validation Error!" : "Test Email Validation Error!",
-    "Test Email Sent Successfully" : "Test Email Sent Successfully"
+    "Test Email Sent Successfully" : "Test Email Sent Successfully",
+
+    "Invoices" : "Invoices",
+    "Add New Invoice" : "Add New Invoice"
 }

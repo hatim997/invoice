@@ -79,7 +79,7 @@
                 <button type="submit" class="btn btn-primary d-grid w-100">{{__('Sign in')}}</button>
             </form>
 
-            <p class="text-center">
+            {{-- <p class="text-center">
                 <span>{{__('New on our platform?')}}</span>
                 <a href="{{route('register')}}">
                     <span>{{__('Create an account')}}</span>
@@ -91,13 +91,6 @@
             </div>
 
             <div class="d-flex justify-content-center">
-                {{-- <a href="javascript:;" class="btn btn-sm btn-icon rounded-pill btn-text-facebook me-1_5">
-                    <i class="tf-icons ti ti-brand-facebook-filled"></i>
-                </a>
-
-                <a href="javascript:;" class="btn btn-sm btn-icon rounded-pill btn-text-twitter me-1_5">
-                    <i class="tf-icons ti ti-brand-twitter-filled"></i>
-                </a> --}}
 
                 <a href="{{ route('auth.github.login') }}" class="btn btn-sm btn-icon rounded-pill btn-text-github me-1_5">
                     <i class="tf-icons ti ti-brand-github-filled"></i>
@@ -106,7 +99,7 @@
                 <a  href="{{ route('auth.google.login') }}" class="btn btn-sm btn-icon rounded-pill btn-text-google-plus">
                     <i class="tf-icons ti ti-brand-google-filled"></i>
                 </a>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- /Login -->

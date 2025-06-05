@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Dashboard\HomeController;
+use App\Http\Controllers\Dashboard\InvoiceController;
 use App\Http\Controllers\Dashboard\NotificationController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\RolePermission\PermissionController;
@@ -63,16 +64,16 @@ Route::group(['middleware' => ['guest']], function () {
     Route::get('login', [LoginController::class, 'login'])->name('login');
     Route::post('login-attempt', [LoginController::class, 'login_attempt'])->name('login.attempt');
 
-    //User Register Authentication Routes
-    Route::get('register', [RegisterController::class, 'register'])->name('register');
-    Route::post('registration-attempt', [RegisterController::class, 'register_attempt'])->name('register.attempt');
+    // //User Register Authentication Routes
+    // Route::get('register', [RegisterController::class, 'register'])->name('register');
+    // Route::post('registration-attempt', [RegisterController::class, 'register_attempt'])->name('register.attempt');
 
-    // Google Authentication Routes
-    Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google.login');
-    Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('auth.google.login.callback');
-    // Github Authentication Routes
-    Route::get('auth/github', [GithubController::class, 'redirectToGithub'])->name('auth.github.login');
-    Route::get('auth/github/callback', [GithubController::class, 'handleGithubCallback'])->name('auth.github.login.callback');
+    // // Google Authentication Routes
+    // Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google.login');
+    // Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('auth.google.login.callback');
+    // // Github Authentication Routes
+    // Route::get('auth/github', [GithubController::class, 'redirectToGithub'])->name('auth.github.login');
+    // Route::get('auth/github/callback', [GithubController::class, 'handleGithubCallback'])->name('auth.github.login.callback');
     // Facebook Authentication Routes
     // Route::controller(FacebookController::class)->group(function () {
     //     Route::get('auth/facebook', 'redirectToFacebook')->name('auth.facebook');
@@ -136,6 +137,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
             Route::post('send-mail/setting', [SettingController::class, 'sendTestMail'])->name('setting.send_test_mail');
 
             // User Dashboard Authentication Routes
+
+            //Invoice
+            Route::resource('invoices', InvoiceController::class);
 
 
 
