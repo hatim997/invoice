@@ -182,10 +182,10 @@
         <div class="left">
             Riyadh Kingdom of Saudi Arabia - 11564
         </div>
-        <div class="right" style="display: flex; align-items: center; gap: 10px;">
+        <div class="right" style="display: flex; align-items: center; gap: 10px; font-size: 18px;">
             <span>Rihlat alSama</span>
             <img style="height: 60px;" src="{{ asset('uploads/skytrip-logo.png') }}" alt="{{ env('APP_NAME') }}">
-            <span>وكالة رحلات السماء للسفر</span>
+            <span>وكالة رحلات السماء للسفر و السياحة</span>
         </div>
     </div>
 
@@ -293,7 +293,7 @@
                     <span>: {{ number_format($grandTotal, 2) }}</span>
                 </div>
                 <div class="flex-row">
-                    <img style="height: 60px;" src="{{ asset('uploads/qrcode.jpeg') }}" alt="{{ env('APP_NAME') }}">
+                    <img style="height: 60px;" src="{{ asset('uploads/frame.png') }}" alt="{{ env('APP_NAME') }}">
                 </div>
             </td>
         </tr>
